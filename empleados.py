@@ -1,14 +1,22 @@
 empleos = open('empleados.txt','a')
 
-num_empleados = int(input("Digite la cantidad de empleados que desea almacenar: "))
+while resp != 4:
 
-for i in range(num_empleados):
+    print("MENU DE OPCIONES: ")
+    print("1. Agregar empleados")
+    print("2. Leer lista de empleados empleados")
+    print("3. Buscar empleados")
+    print("4. Salir")
 
-    nombre = input(f'Ingrese el nombre del empleado {i+1}: ')
-    apellido = input(f'Ahora su apellido: ')
-    telefono = int(input(f'Y por ultimo su telefono: '))
+    num_empleados = int(input("Digite la cantidad de empleados que desea almacenar: "))
 
-    empleos.write(f'\n {nombre} { apellido} { telefono} ')
+    for i in range(num_empleados):
+
+        nombre = input(f'Ingrese el nombre del empleado {i+1}: ')
+        apellido = input(f'Ahora su apellido: ')
+        telefono = int(input(f'Y por ultimo su telefono: '))
+
+        empleos.write(f'\n {nombre} { apellido} { telefono} ')
 
 
 
